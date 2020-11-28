@@ -1,6 +1,31 @@
 grammar Chat;
 
 /*
+ * Regras do Parser
+ */
+
+chat                : line+ EOF ;
+
+line                : name command message NEWLINE;
+
+message             : (emoticon | link | color | mention | WORD | WHITESPACE)+ ;
+
+name                : WORD WHITESPACE;
+
+command             : (SAYS | SHOUTS) ':' WHITESPACE ;
+                                        
+emoticon            : ':' '-'? ')'
+                    | ':' '-'? '('
+                    ;
+
+link                : '[' TEXT ']' '(' TEXT ')' ;
+
+color               : '/' WORD '/' message '/';
+
+mention             : '@' WORD ;
+
+// Regras léxicas devem sempre ficar ao fim, de acordo com o Tutorial
+/*
  * Regras Lexicas
  */
 
@@ -25,4 +50,7 @@ WHITESPACE          : (' ' | 't') ;
 
 NEWLINE             : ('r'? 'n' | 'r')+ ;
 
-TEXT                : ~[])]+ ;
+TEXT                : ('['|'(') .*? (']'|')');
+
+fragment DIGIT : [0-9] ;
+NUMBER         : DIGIT+ ([.,] DIGIT+)? ;

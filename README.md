@@ -7,10 +7,13 @@ Alexsander Oliveira e Tailine Wornath
 # Instruções para execução
 1 - Via terminal, localizar a pasta em que o projeto foi extraído e acessar a mesma:
         Exemplo: cd /Downloads/APS-Compiladores
+
 2 - Caso não possuir o ANTLR instalado em seu sistema rodar o comando no terminal Linux/Bash: 
-        curl -LO http://www.antlr.org/download/antlr-4.8-complete.jar    
+        curl -LO http://www.antlr.org/download/antlr-4.8-complete.jar
+
 3 - Copiar a Lib do ANTLR através do comando abaixo para salvar no diretório de Libs gerais:
-        sudo cp antlr-4.7.2-complete.jar /usr/local/lib/    
+        sudo cp antlr-4.7.2-complete.jar /usr/local/lib/
+
 4 - Executar o comando: 
         export CLASSPATH=".:$PWD/antlr-4.8-complete.jar:$CLASSPATH"
 
@@ -24,12 +27,16 @@ Também, caso desejar, criar um alias para execução do ANTLR
 5 - Executar o comando: 
         antlr4 Chat.g4
         Se não possuir o alias, executar java -jar antlr-4.8-complete.jar Chat.g4
+
 6 - Rodar o comando do Java:
         javac *.java
+
 7 - Adicionar o alias para a ferramenta de teste do ANTLR:
-        alias grun='java org.antlr.v4.runtime.misc.TestRig'    
+        alias grun='java org.antlr.v4.runtime.misc.TestRig'
+
 8 - Executar o comando:
         grun Chat r -tokens
+
 9 - Realizar a conversa conforme desejar e então ao final, pressionar Ctrl+D ou Command+D
 
 # Considerações

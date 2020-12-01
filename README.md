@@ -8,11 +8,11 @@ Alexsander Oliveira e Tailine Wornath
         1 - Via terminal, localizar a pasta em que o projeto foi extraído e acessar a mesma:
                 Exemplo: cd /Downloads/APS-Compiladores
 
-        2 - Caso não possuir o ANTLR instalado em seu sistema rodar o comando no terminal Linux/Bash: 
-        curl -LO 
-        http://www.antlr.org/download/antlr-4.8-complete.jar
+        2 - Caso não possuir o ANTLR instalado em seu sistema, rodar o comando no terminal Linux/Bash: 
+                curl -LO 
+            http://www.antlr.org/download/antlr-4.8-complete.jar
 
-        3 - Copiar a Lib do ANTLR através do comando a seguir para salvar no diretório de Libs gerais:
+        3 - Copiar a Lib do ANTLR através do comando abaixo para salvar no diretório de Libs gerais:
                 sudo cp antlr-4.7.2-complete.jar /usr/local/lib/
 
         4 - Executar o comando: 

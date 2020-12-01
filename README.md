@@ -5,39 +5,40 @@ Repositório para o desenvolvimento do Chat da APS de Compiladores, feito com us
 Alexsander Oliveira e Tailine Wornath
 
 # Instruções para execução:
-1 - Via terminal, localizar a pasta em que o projeto foi extraído e acessar a mesma:
-        Exemplo: cd /Downloads/APS-Compiladores
+        1 - Via terminal, localizar a pasta em que o projeto foi extraído e acessar a mesma:
+                Exemplo: cd /Downloads/APS-Compiladores
 
-2 - Caso não possuir o ANTLR instalado em seu sistema rodar o comando no terminal Linux/Bash: 
-        curl -LO http://www.antlr.org/download/antlr-4.8-complete.jar
+        2 - Caso não possuir o ANTLR instalado em seu sistema rodar o comando no terminal Linux/Bash: 
+        curl -LO 
+        http://www.antlr.org/download/antlr-4.8-complete.jar
 
-3 - Copiar a Lib do ANTLR através do comando a seguir para salvar no diretório de Libs gerais:
-        sudo cp antlr-4.7.2-complete.jar /usr/local/lib/
+        3 - Copiar a Lib do ANTLR através do comando a seguir para salvar no diretório de Libs gerais:
+                sudo cp antlr-4.7.2-complete.jar /usr/local/lib/
 
-4 - Executar o comando: 
-        export CLASSPATH=".:$PWD/antlr-4.8-complete.jar:$CLASSPATH"
+        4 - Executar o comando: 
+                export CLASSPATH=".:$PWD/antlr-4.8-complete.jar:$CLASSPATH"
 
-        Caso desejar testar o funcionamento do ANTLR, execute os comandos a seguir:
-            java -jar antlr-4.8-complete.jar
-            java org.antlr.v4.Tool
+                Caso desejar testar o funcionamento do ANTLR, execute os comandos a seguir:
+                        java -jar antlr-4.8-complete.jar
+                        java org.antlr.v4.Tool
 
-        Também, caso desejar, criar um alias para execução do ANTLR, execute:
-            alias antlr4='java -jar antlr-4.8-complete.jar'
+                Também, caso desejar, criar um alias para execução do ANTLR, execute:
+                        alias antlr4='java -jar antlr-4.8-complete.jar'
 
-5 - Executar o comando: 
-        antlr4 Chat.g4
-        Importante: Se não possuir o alias, executar então o comando: java -jar antlr-4.8-complete.jar Chat.g4
+        5 - Executar o comando: 
+                antlr4 Chat.g4
+                Importante: Se não possuir o alias, executar então o comando: java -jar antlr-4.8-complete.jar Chat.g4
 
-6 - Rodar o comando do Java:
-        javac *.java
+        6 - Rodar o comando do Java:
+                javac *.java
 
-7 - Adicionar o alias para a ferramenta de teste do ANTLR:
-        alias grun='java org.antlr.v4.runtime.misc.TestRig'
+        7 - Adicionar o alias para a ferramenta de teste do ANTLR:
+                alias grun='java org.antlr.v4.runtime.misc.TestRig'
 
-8 - Executar o comando:
-        grun Chat r -tokens
+        8 - Executar o comando:
+                grun Chat r -tokens
 
-9 - Realizar a conversa conforme desejar e então ao final, pressionar Ctrl+D ou Command+D.
+        9 - Realizar a conversa conforme desejar e então ao final, pressionar Ctrl+D ou Command+D.
 
 
 # Considerações:
